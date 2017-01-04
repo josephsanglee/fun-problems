@@ -33,6 +33,7 @@ const merge = (leftArray, rightArray) => {
 
   return mergedArray;
 };
+
 var mergedExample = merge([1, 5, 6, 8, 9, 15], [2, 7, 238]);
 console.assert(mergedExample[0] === 1, 'Should be a numerically sorted array');
 console.assert(mergedExample[8] === 238, 'Should be a numerically sorted array');

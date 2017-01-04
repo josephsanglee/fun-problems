@@ -16,20 +16,17 @@ const partition = (array, start, end) => {
     // the value at this index with the value at the pivot, then increase
     // the pivotIndex by 1. 
     if (value <= pivot) {
-      let oldValue = array[pivotIndex];
-      array[pivotIndex] = value;
-      array[i] = oldValue;
+      [array[pivotIndex], array[i]] = [array[i], array[pivotIndex]];
       pivotIndex++;
     }
   }
 
-  array[end] = array[pivotIndex];
-  array[pivotIndex] = pivot;
+  [array[end], array[pivotIndex]] = [array[pivotIndex], pivot];
 
   return pivotIndex;
 };
 
-const quickSort = (array, start, end) => {
+const quickSort = (array, start = 0, end = array.length - 1) => {
 
   if (start < end) {
     pivotIndex = partition(array, start, end);
@@ -41,5 +38,5 @@ const quickSort = (array, start, end) => {
 
 var arr = [7, 2, 1, 6, 8, 5, 3, 4];
 
-quickSort(arr, 0, arr.length - 1);
+quickSort(arr);
 console.log(arr);
