@@ -14,7 +14,7 @@ class BinaryHeap {
   }
 
   getParentIndex(index) {
-    return Math.floor((index - 1) / 2);
+    return Math.floor(index / 2) - 1;
   }
 
   getChildrenIndices(index) {
