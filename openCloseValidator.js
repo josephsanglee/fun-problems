@@ -47,7 +47,7 @@ const openCloseValidator = (string) => {
   
   // if the loop finishes without returning true, that 
   // means all the openers and closers matched. WOO!
-  return true;
+  return openersStack.length === 0;
 };
 
 console.log(openCloseValidator('{ [ ] ( ) }')); // true
