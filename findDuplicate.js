@@ -1,3 +1,7 @@
+/*
+In an array ranging from 0 to n, find the number that is duplicated.
+*/
+
 const findDuplicate = (array, n) => {
   let totalSum = 0;
   
