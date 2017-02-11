@@ -30,23 +30,6 @@
  * You will need a doubly-linked list (provided).
  */
 
-var LRUCache = function (limit) {
-};
-
-var LRUCacheItem = function (val, key) {
-};
-
-LRUCache.prototype.size = function () {
-};
-
-LRUCache.prototype.get = function (key) {
-};
-
-LRUCache.prototype.set = function (key, val) {
-};
-
-
-
 var List = function () {
   this.head = null;
   this.tail = null;
@@ -169,6 +152,26 @@ List.prototype.moveToEnd = function (node) {
 ListNode.prototype.delete = function () {
   if (this.prev) { this.prev.next = this.next; }
   if (this.next) { this.next.prev = this.prev; }
+};
+
+
+//----------------------------------------------------------
+
+
+var LRUCache = function (limit) {
+  this.cache = new List();
+};
+
+var LRUCacheItem = function (val, key) {
+};
+
+LRUCache.prototype.size = function () {
+};
+
+LRUCache.prototype.get = function (key) {
+};
+
+LRUCache.prototype.set = function (key, val) {
 };
 
 var cache = new LRUCache(3); // limit of 3 items
